@@ -117,6 +117,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    height:65px;
     width: 100%;
     background-color: black;
     padding: 15px 0;
@@ -124,6 +125,7 @@ nav {
 }
 
 .nav-container {
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,7 +243,7 @@ nav {
 }
 
 .project-header {
-  background-color: #64ffda;
+  background-color: #e47f12;
   color: #0a192f;
   font-weight: bold;
   padding: 8px; /* slightly reduced padding */
@@ -283,7 +285,7 @@ nav {
 .view-button {
   display: inline-block;
   text-decoration: none;
-  background-color: #64ffda;
+  background-color: #e47f12;
   color: #0a192f;
   padding: 6px 12px; /* reduced padding */
   border-radius: 8px;
@@ -484,6 +486,56 @@ nav{
 }
 
 /* Contact Me Section */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+.social-links {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 300px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.social-links h2 {
+  color: #64ffda;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #64ffda;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links i {
+  font-size: 22px;
+}
+
 .contact {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
@@ -491,6 +543,7 @@ nav{
   border-radius: 20px;
   padding: 40px 30px;
   max-width: 500px;
+  width: 100%;
   margin: auto;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 0.8s ease-out forwards;
@@ -562,4 +615,21 @@ nav{
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact,
+  .social-links {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .social-links {
+    margin-bottom: 30px;
+  }
+}
 
