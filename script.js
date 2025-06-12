@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Close mobile menu
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            
+            // Restore scroll
+            document.body.style.overflow = '';
         });
     });
 
@@ -55,20 +58,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // One project tab open at a time
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        const title = card.querySelector('.project-title');
+        title.addEventListener('click', () => {
+            projectCards.forEach(c => {
+                if (c !== card) c.classList.remove('active');
+            });
+            card.classList.toggle('active');
+        });
+    });
 
-});
+    // About section animation
+    const aboutSection = document.querySelector('#about');
+    const aboutObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                aboutSection.classList.add('visible');
+                aboutObserver.unobserve(entry.target); // Animate once
+            }
+        });
+    }, { threshold: 0.4 });
 
-const aboutSection = document.querySelector('#about');
-
-const aboutObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      aboutSection.classList.add('visible');
-      aboutObserver.unobserve(entry.target); // Animate once
+    if (aboutSection) {
+        aboutObserver.observe(aboutSection);
     }
-  });
-}, { threshold: 0.4 });
-
-if (aboutSection) {
-  aboutObserver.observe(aboutSection);
-}
+});

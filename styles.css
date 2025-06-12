@@ -376,6 +376,7 @@ nav {
 
 
 .about-section {
+  margin-top: -10px;
   background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   padding: 80px 20px;
@@ -425,6 +426,7 @@ nav {
 }
 
 @media (min-width: 768px) {
+  
   .about-content {
     flex-direction: row;
     justify-content: space-between;
@@ -559,3 +561,5 @@ nav{
     transform: translateY(0);
   }
 }
+
+
