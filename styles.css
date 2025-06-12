@@ -117,12 +117,26 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height:65px;
+    height:70px;
     width: 100%;
     background-color: black;
     padding: 15px 0;
     z-index: 1000;
 }
+
+/* Logo styling */
+.logo {
+    margin-top: -11px;
+    top: 0%;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
 
 .nav-container {
   
@@ -166,7 +180,7 @@ nav {
     padding: 10px;
     position: absolute;
     left: 83%;
-    top: 50%;
+    top: 10%;
     transform: translateY(-50%);
 }
 
@@ -295,6 +309,7 @@ nav {
 }
 
 @media (min-width: 768px) {
+  
   .project-card {
     width: 280px; /* still smaller than original 350px */
     cursor: default;
