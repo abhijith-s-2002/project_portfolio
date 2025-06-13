@@ -70,18 +70,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // About section animation
-    const aboutSection = document.querySelector('#about');
-    const aboutObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                aboutSection.classList.add('visible');
-                aboutObserver.unobserve(entry.target); // Animate once
-            }
-        });
-    }, { threshold: 0.4 });
-
-    if (aboutSection) {
-        aboutObserver.observe(aboutSection);
-    }
+    
 });
