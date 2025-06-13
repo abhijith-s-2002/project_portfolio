@@ -245,6 +245,20 @@ nav {
   padding: 10px;
 }
 
+.projects-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e47f12;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e47f12;
+  padding-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+
 .project-card {
   background-color: #1e1e2f;
   border-radius: 9px;
